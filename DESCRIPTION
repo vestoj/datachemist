@@ -1,5 +1,5 @@
 Package: datachemist
-Title: What the Package Does (One Line, Title Case)
+Title: Simplify Analytical Chemistry Data Analysis
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "First",
@@ -7,7 +7,11 @@ Authors@R:
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: This pakage seeks to simplify Analytical Chemistry data analysis through providing example 
+    functions that research groups could alter to use within their lab group's SOP for data analysis. 
+    Created based on an assignment from Reed College's 2019 Chem 311: Analytical Chemistry course taught 
+    by Juliane Fry and Danielle Cass. 
+
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
