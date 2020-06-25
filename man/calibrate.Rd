@@ -2,30 +2,30 @@
 % Please edit documentation in R/calibrate.R
 \name{calibrate}
 \alias{calibrate}
-\title{Weighted Linear Calibration from instrumental data}
+\title{Calibrate ICPMS Data}
 \usage{
 calibrate(signal, RSD, conc, element, conc_unit, signal_unit)
 }
 \arguments{
-\item{signal}{attribute}
+\item{signal}{(attribute) instrument reading value}
 
-\item{RSD}{attribute}
+\item{RSD}{(attribute) residual standard deviation of the signal}
 
-\item{conc}{attribute}
+\item{conc}{(attribute) expected standard sample concentration}
 
-\item{element}{character}
+\item{element}{(character) element being tested for the concentration of}
 
-\item{conc_unit}{character}
+\item{conc_unit}{(character) units for the standard's concentrations}
 
-\item{signal_unit}{character}
+\item{signal_unit}{(character) units on the instrument signal}
 }
 \value{
 
 }
 \description{
-Weighted Linear Calibration from instrumental data
+Weighted linear calibration for instrumental data such as that collected from inductively coupled plasma mass spectroscopy (ICPMS).
 }
 \examples{
-calibrate(ICPMS$signal, ICPMS$RSD, ICPMS$conc, "Pb", "um", "ppb")
+calibrate(ICPMS$signal, ICPMS$RSD, ICPMS$conc, "Pb", "um", "AU")
 
 }

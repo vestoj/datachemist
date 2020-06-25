@@ -1,16 +1,18 @@
-#' Weighted Linear Calibration from instrumental data
+#' Calibrate ICPMS Data
 #'
-#' @param signal attribute
-#' @param RSD attribute
-#' @param conc attribute
-#' @param element character
-#' @param conc_unit character
-#' @param signal_unit character
+#' Weighted linear calibration for instrumental data such as that collected from inductively coupled plasma mass spectroscopy (ICPMS).
+#'
+#' @param signal (attribute) instrument reading value
+#' @param RSD (attribute) residual standard deviation of the signal
+#' @param conc (attribute) expected standard sample concentration
+#' @param element (character) element being tested for the concentration of
+#' @param conc_unit (character) units for the standard's concentrations
+#' @param signal_unit (character) units on the instrument signal
 #'
 #' @return
 #' @export
 #'
-#' @examples calibrate(ICPMS$signal, ICPMS$RSD, ICPMS$conc, "Pb", "um", "ppb")
+#' @examples calibrate(ICPMS$signal, ICPMS$RSD, ICPMS$conc, "Pb", "um", "AU")
 #'
 
 calibrate <- function(signal, RSD, conc, element, conc_unit, signal_unit){
