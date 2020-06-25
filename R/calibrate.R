@@ -12,9 +12,10 @@
 #' @return
 #' @export
 #'
-#' @examples calibrate(ICPMS$signal, ICPMS$RSD, ICPMS$conc, "Pb", "um", "AU")
+#' @examples
 #'
 
+# Example that will be fixed later: calibrate(ICPMS$signal, ICPMS$RSD, ICPMS$conc, "Pb", "um", "AU")
 calibrate <- function(signal, RSD, conc, element, conc_unit, signal_unit){
   w <- 1/(signal*RSD)^2
   model <- stats::lm(signal ~ conc, weights= w)
@@ -30,7 +31,7 @@ calibrate <- function(signal, RSD, conc, element, conc_unit, signal_unit){
     graphics::abline(model, col="red")+
     graphics::title( paste("Calibration for", element))
 
-  cat("Concentration", conc_unit, "=", slope, stringi::stri_escape_unicode("\u241"), slope_STD,"(x) + (", intercept, stringi::stri_escape_unicode("\u241"), intercept_STD,")")
+  cat("Concentration", conc_unit, "=", slope, "\u241", slope_STD,"(x) + (", intercept, "\u241", intercept_STD,")")
   equation <- data.frame(element, slope, slope_STD, intercept, intercept_STD)
   }
 

@@ -26,6 +26,5 @@ calibrate(signal, RSD, conc, element, conc_unit, signal_unit)
 Weighted linear calibration for instrumental data such as that collected from inductively coupled plasma mass spectroscopy (ICPMS).
 }
 \examples{
-calibrate(ICPMS$signal, ICPMS$RSD, ICPMS$conc, "Pb", "um", "AU")
 
 }
