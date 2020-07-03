@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of datachemist is to provide an example for how chemists can utilize R in their lab groups for comprehensive reproducible data analysis, similar to implementing a lab SOP.
+The goal of datachemist is to provide an example for how chemists can utilize R in their research for comprehensive reproducible data analysis, similar to implementing a lab SOP.
 
 ## Installation
 
